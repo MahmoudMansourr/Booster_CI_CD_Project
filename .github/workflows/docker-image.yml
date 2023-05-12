@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        echo "${{ secrets.DOCKER_P }}" | docker login -u "Mahmoudmansourr" --password-stdin
+        echo "${{ secrets.DOCKER_P }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
         docker image build -t Mahmoudmansourr/git_django:latest .
         docker push Mahmoudmansourr/git_django:latest
