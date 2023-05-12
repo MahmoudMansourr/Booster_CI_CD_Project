@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: 
+      run: |
         docker build . --file Dockerfile --tag mahmoudmansourr/django:v1.0
         docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
         docker push mahmoudmansourr/django:v1.0
