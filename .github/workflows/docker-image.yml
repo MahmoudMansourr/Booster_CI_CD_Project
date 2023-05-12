@@ -17,5 +17,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-        docker image build -t Mahmoudmansourr/git_django:latest .
-        docker push Mahmoudmansourr/git_django:latest
+        docker image build -t mahmoudmansourr/git_django:latest .
+        docker push mahmoudmansourr/git_django:latest
