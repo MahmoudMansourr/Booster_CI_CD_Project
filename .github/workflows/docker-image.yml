@@ -19,6 +19,6 @@ jobs:
       run: |
         echo ${{ secrets.DOCKER_PASS }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
         docker build . --file Dockerfile --tag django:v1.0
-        docker -t django:v1.0 mahmoudmansourr/django:v1.0
+        docker tag django:v1.0 mahmoudmansourr/django:v1.0
         docker push mahmoudmansourr/django:v1.0
       
